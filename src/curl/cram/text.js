@@ -3,6 +3,7 @@
 /**
  * curl text! cram plugin
  */
+define = vtex['define'] || window['define'];
 define(function (require) {
 
 	var jsEncode = require('./jsEncode');

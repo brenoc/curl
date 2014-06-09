@@ -134,6 +134,7 @@
  *
  */
 
+define = vtex['define'] || window['define'];
 define(/*=='curl/plugin/i18n',==*/ ['./locale'], function (getLocale) {
 
 	return {

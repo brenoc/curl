@@ -8,6 +8,7 @@
  *
  */
 
+define = vtex['define'] || window['define'];
 define(['curl', 'curl/_privileged', './undefine'], function (curl, priv, undefine) {
 "use strict";
 

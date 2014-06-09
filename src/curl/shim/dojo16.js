@@ -21,6 +21,7 @@
  *
  */
 var require;
+define = vtex['define'] || window['define'];
 define(/*=='curl/shim/dojo16',==*/ ['curl/_privileged', 'curl/domReady'], function (priv, domReady) {
 "use strict";
 

@@ -10,6 +10,8 @@
  * 		http://www.opensource.org/licenses/mit-license.php
  *
  */
+ window['vtex'] || (window['vtex'] = {});
+
 (function (global) {
 //"use strict"; don't restore this until the config routine is refactored
 	var
@@ -21,7 +23,7 @@
 		userCfg,
 		prevCurl,
 		prevDefine,
-		doc = global.document,
+		doc = window.document,
 		head = doc && (doc['head'] || doc.getElementsByTagName('head')[0]),
 		// to keep IE from crying, we need to put scripts before any
 		// <base> elements, but after any <meta>. this should do it:
@@ -1364,7 +1366,8 @@
 		'Promise': Promise
 	};
 
-}(this.window || (typeof global != 'undefined' && global) || this));
+}(this.window['vtex'] || (typeof global != 'undefined' && global) || this));
+define = vtex['define'] || window['define'];
 define('curl/plugin/_fetchText', [], function () {
 
 	var xhr, progIds;
@@ -1418,6 +1421,7 @@ define('curl/plugin/_fetchText', [], function () {
 
 });
 (function (freeRequire) {
+define = vtex['define'] || window['define'];
 define('curl/shim/_fetchText', function () {
 
 	var fs, http, url;
@@ -1482,6 +1486,7 @@ define['amd'].ssjs = true;
 if (typeof module !== 'undefined') module.exports = curl;
 var require, load;
 (function (freeRequire, globalLoad) {
+define = vtex['define'] || window['define'];
 define('curl/shim/ssjs', ['curl/_privileged', './_fetchText'], function (priv, _fetchText) {
 "use strict";
 
@@ -1652,6 +1657,7 @@ define('curl/shim/ssjs', ['curl/_privileged', './_fetchText'], function (priv, _
 
 (function (global, document, globalEval) {
 
+define = vtex['define'] || window['define'];
 define('curl/loader/cjsm11', ['../plugin/_fetchText', 'curl/_privileged'], function (fetchText, priv) {
 
 	var head, insertBeforeEl, extractCjsDeps, checkToAddJsExt;

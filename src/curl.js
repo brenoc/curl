@@ -10,6 +10,8 @@
  * 		http://www.opensource.org/licenses/mit-license.php
  *
  */
+ window['vtex'] || (window['vtex'] = {});
+
 (function (global) {
 //"use strict"; don't restore this until the config routine is refactored
 	var
@@ -21,7 +23,7 @@
 		userCfg,
 		prevCurl,
 		prevDefine,
-		doc = global.document,
+		doc = window.document,
 		head = doc && (doc['head'] || doc.getElementsByTagName('head')[0]),
 		// to keep IE from crying, we need to put scripts before any
 		// <base> elements, but after any <meta>. this should do it:
@@ -1364,4 +1366,4 @@
 		'Promise': Promise
 	};
 
-}(this.window || (typeof global != 'undefined' && global) || this));
+}(this.window['vtex'] || (typeof global != 'undefined' && global) || this));

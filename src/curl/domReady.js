@@ -118,7 +118,7 @@
 			pollerHandle = setTimeout(poller, pollerTime);
 		}
 	}
-
+	define = vtex['define'] || window['define'];
 	define(/*=='curl/domReady',==*/ function () {
 
 		// this is simply a callback, but make it look like a promise

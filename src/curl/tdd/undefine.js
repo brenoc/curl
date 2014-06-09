@@ -8,6 +8,7 @@
  *
  */
 
+define = vtex['define'] || window['define'];
 define(['curl/_privileged', 'require'], function (priv, require) {
 	var cache, cleanupScript, loadScript;
 

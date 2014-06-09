@@ -20,6 +20,7 @@
  * TODO: use "../domReady" instead of "curl/domReady" when curl's make.sh is updated to use cram
  */
 
+define = vtex['define'] || window['define'];
 define(/*=='curl/plugin/domReady',==*/ ['../domReady'], function (domReady) {
 
 	return {

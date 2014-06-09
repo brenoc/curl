@@ -1,5 +1,6 @@
 /** MIT License (c) copyright 2010-2013 B Cavalier & J Hann */
 
+define = vtex['define'] || window['define'];
 define(function () {
 	var map, encodeRx;
 

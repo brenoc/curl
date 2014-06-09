@@ -40,6 +40,7 @@
  */
 var require;
 (function (global, doc){
+define = vtex['define'] || window['define'];
 define(/*=='curl/shim/dojo18',==*/ ['curl/_privileged'], function (priv) {
 "use strict";
 

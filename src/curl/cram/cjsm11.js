@@ -3,6 +3,7 @@
 /**
  * cram CommonJS modules/1.1 plugin
  */
+define = vtex['define'] || window['define'];
 define(['../loader/cjsm11'], function (wrapCjsm11) {
 
 	return {

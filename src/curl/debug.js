@@ -20,6 +20,7 @@
  * TODO: only add logging to some of the useful core functions
  *
  */
+define = vtex['define'] || window['define'];
 define(/*=='curl/debug',==*/ ['require', 'curl/_privileged'], function (require, priv) {
 "use strict";
 

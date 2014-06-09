@@ -4,6 +4,7 @@
  * curl style! plugin
  */
 
+define = vtex['define'] || window['define'];
 define([], function () {
 
 	var nonRelUrlRe, findUrlRx, undef, doc, head;

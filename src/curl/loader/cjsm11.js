@@ -30,6 +30,7 @@
 
 (function (global, document, globalEval) {
 
+define = vtex['define'] || window['define'];
 define(/*=='curl/loader/cjsm11',==*/ ['../plugin/_fetchText', 'curl/_privileged'], function (fetchText, priv) {
 
 	var head, insertBeforeEl, extractCjsDeps, checkToAddJsExt;

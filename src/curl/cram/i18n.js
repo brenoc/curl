@@ -3,6 +3,7 @@
 /**
  * curl i18n! cram plugin
  */
+define = vtex['define'] || window['define'];
 define(function (require) {
 
 	var i18n = require('../plugin/i18n');

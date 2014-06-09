@@ -1,4 +1,5 @@
 (function (freeRequire) {
+define = vtex['define'] || window['define'];
 define(/*=='curl/shim/_fetchText',==*/ function () {
 
 	var fs, http, url;
